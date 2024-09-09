@@ -61,6 +61,12 @@ body {
 
 
 
+.card{
+    background: var(--tertiary);
+    padding: 15px;
+    border-radius: 10px;
+}
+
 button{
     font-family: 'Poppins', sans-serif!important;
     font-weight: 600;
@@ -146,6 +152,38 @@ a{
     gap: 15px;
     align-items: center;
 }
+.center{
+    justify-content: center;
+    align-items: center;
+}
+.text-center{
+    text-align: center;
+}
+
+input{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+    border: 1px solid #d7d7d7;
+    background: transparent;
+    color: #d7d7d7;
+    font-family: 'Poppins', sans-serif!important;
+    transition: all 0.2s;
+    font-weight: 600;
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid var(--light);
+}
+
+input::placeholder{
+    color: #afafaf;
+    font-weight: 300;
+}
+
 .hero__image{
     height: 100vh;
     width: 100%;
@@ -153,6 +191,9 @@ a{
 h1{
     font-size: 45px;
 }
+
+/* Media Queries */
+
 @media screen and (max-width: 768px) {
     .flex__duo {
         align-items: start;
