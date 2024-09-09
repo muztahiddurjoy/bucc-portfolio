@@ -1,0 +1,1 @@
+import mama from './components/footer.js'
