@@ -1,7 +1,7 @@
 class Navbar extends HTMLElement{
     constructor() {
         super();
-        console.log("Footer Initialized");
+        console.log("Navbar Initialized");
       }
     
       connectedCallback() {
