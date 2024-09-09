@@ -1,16 +1,19 @@
-class ProjectContainer extends HTMLElement {
+class UserProjectContainer extends HTMLElement {
     constructor() {
       super();
-      console.log("Project Container Initialized");
+      console.log("User Project Container Initialized");
     }
   
     connectedCallback() {
         const projectKeys = JSON.parse(localStorage.getItem('projects')) || [];
-        console.log("PROJECT KEYS",projectKeys)
+        const userKey = localStorage.getItem('currentPortfolio');
+        const user = JSON.parse(localStorage.getItem(userKey));
         let projects_html = ``;
         projectKeys.map(key => {
             const project = JSON.parse(localStorage.getItem(key));
-            
+            if(project.authorEmail !== user.email){
+                return;
+            }
             projects_html += `<div class="card fadeInUp">
                 <h2>${project.projectName}</h2>
                 <p style="font-size:14px;margin-top:10px;margin-bottom:15px">${project.projectDescription}</p>
@@ -21,9 +24,9 @@ class ProjectContainer extends HTMLElement {
                 <a  href="${project.projectLink}" target="_blank">
                 <button class="button__contained" style="margin-top:20px">Visit Project</button>
                 </a>
-            </div> \n`
+            </div>`
         });     
-        this.innerHTML =`<div class="flex wrap" style="margin-top: 30px;">${projects_html}</div>` 
+        this.innerHTML =`<div class="flex wrap" style="margin-top: 30px;">${projects_html}</div>`
     } 
     
 
@@ -43,4 +46,4 @@ class ProjectContainer extends HTMLElement {
     }
 }
 
-export default customElements.define("project-container", ProjectContainer);
+export default customElements.define("user-projects", UserProjectContainer);
