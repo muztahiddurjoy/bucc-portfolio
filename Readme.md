@@ -16,7 +16,7 @@ Bucc Portfolio is a web application that showcases the portfolio of a fictional 
 - JavaScript 
 
 ## Installation:
-1. Clone the repository: `git clone https://github.com/your-username/bucc-portfolio.git`
+1. Clone the repository: `git clone https://github.com/muztahiddurjoy/bucc-portfolio.git`
 2. Navigate to the project directory: `cd bucc-portfolio`
 3. Open the `index.html` file in your preferred web browser.
 
