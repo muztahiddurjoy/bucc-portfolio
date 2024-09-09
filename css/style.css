@@ -67,6 +67,9 @@ body {
     min-height: 100vh;
 }
 
+.wrap{
+    flex-wrap: wrap;
+}
 
 
 .card{
