@@ -17,11 +17,20 @@ class UserContainer extends HTMLElement {
             <div style="margin-top: 20px;">
                 <p>Age : ${user.age}</p>
                 <p>Email : ${user.email}</p>
+                <p>Experiences : ${user.experience}</p>
             </div>
+
+        <button class="button__outlined" style="margin-top: 20px;" id="logoutButton">Logout</button>
         </div>`
         }
+        this.querySelector('#logoutButton').addEventListener('click', this.handleLogout.bind(this));
     }
-  
+    
+    handleLogout(){
+        localStorage.removeItem('currentPortfolio');
+        window.location.href = '/';
+    }
+
     disconnectedCallback() {
     }
   

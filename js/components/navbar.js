@@ -16,7 +16,7 @@ class Navbar extends HTMLElement{
                         <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="user.html">Profiles</a>
+                        <a href="profiles.html">Profiles</a>
                     </li>
                     <li>
                      ${!user?`<a href="login.html">
