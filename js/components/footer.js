@@ -1,13 +1,13 @@
 class Footer extends HTMLElement {
     constructor() {
       super();
-      console.log()
+      console.log("Footer Initialized");
     }
   
     connectedCallback() {
         let date = new Date(this.getAttribute('datetime') || Date.now());
 
-        this.innerHTML = `<h1>Footer nigga ${date}</h1>`
+        this.innerHTML = `<h1 style="color:red">Footer nigga</h1>`
     }
   
     disconnectedCallback() {
@@ -24,8 +24,6 @@ class Footer extends HTMLElement {
     adoptedCallback() {
       
     }
-  
-    
-  }
+}
 
 export default customElements.define("bucc-footer", Footer);

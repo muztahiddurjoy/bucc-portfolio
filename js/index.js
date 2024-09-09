@@ -1,1 +1,2 @@
-import mama from './components/footer.js'
+import Footer from './components/footer.js'
+import Navbar from './components/navbar.js'
