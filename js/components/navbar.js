@@ -5,8 +5,10 @@ class Navbar extends HTMLElement{
       }
     
       connectedCallback() {
-          let date = new Date(this.getAttribute('datetime') || Date.now());
-  
+        
+        const currentUserID = localStorage.getItem('currentPortfolio');
+        const user = JSON.parse(localStorage.getItem(currentUserID));
+
           this.innerHTML = `<nav class="nav__container">
                 <p class="nav__title">BUCC Portfolio</p>
                 <ul>
@@ -17,9 +19,11 @@ class Navbar extends HTMLElement{
                         <a href="user.html">Profiles</a>
                     </li>
                     <li>
-                     <a href="login.html">
+                     ${!user?`<a href="login.html">
                         <button class="button__contained">Login</button>
-                     </a>
+                     </a>`:`<a href="user.html">
+                     <button class="button__contained">${String(user.name).length>6?String(user.name).substring(0,6)+"...":user.name}</button>
+                  </a>`}
                     </li>
                 </ul>
             </nav>`
