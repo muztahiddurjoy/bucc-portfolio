@@ -19,6 +19,9 @@ class Navbar extends HTMLElement{
                         <a href="profiles.html">Profiles</a>
                     </li>
                     <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li>
                      ${!user?`<a href="login.html">
                         <button class="button__contained">Login</button>
                      </a>`:`<a href="user.html">

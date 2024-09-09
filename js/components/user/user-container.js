@@ -12,9 +12,9 @@ class UserContainer extends HTMLElement {
         }
         else{
         this.innerHTML = `<div class="">
-            <h1><span class="text-light">Welcome </span>${user.name}</h1>
+            <h1 class="fadeInUp"><span class="text-light">Welcome </span>${user.name}</h1>
 
-            <div style="margin-top: 20px;">
+            <div class="fadeInLeft" style="margin-top: 20px;">
                 <p>Age : ${user.age}</p>
                 <p>Email : ${user.email}</p>
                 <p>Experiences : ${user.experience}</p>
