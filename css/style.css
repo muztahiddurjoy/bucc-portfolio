@@ -55,6 +55,14 @@ body {
     color: var(--accent);
 }
 
+.text-tertiary{
+    color: var(--tertiary);
+}
+
+.text-light{
+    color: var(--light);
+}
+
 .full-screen{
     min-height: 100vh;
 }
