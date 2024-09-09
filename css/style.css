@@ -19,6 +19,7 @@
 body {
     font-family: 'Poppins', sans-serif!important;
     background-color: var(--background-color);
+    overflow-x: hidden;
 }
 
 .bg-primary{
@@ -54,7 +55,9 @@ body {
     color: var(--accent);
 }
 
-
+.full-screen{
+    min-height: 100vh;
+}
 
 
 
@@ -163,3 +166,85 @@ h1{
         font-size: 30px;
     }
 }
+
+/* Animation Stuffs */
+
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+.fadeInUp {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.fadeInDown {
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.fadeInLeft {
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.fadeInRight {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
